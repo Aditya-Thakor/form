@@ -7,8 +7,8 @@ export default function Form() {
   const formdata = new FormData();
    
   const handleForm = async()=>{
-    // console.log(username);
-    // console.log(password);  
+    console.log(username);
+    console.log(password);  
 
     formdata.append('username', username);
     formdata.append('password', password);
