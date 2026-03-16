@@ -46,13 +46,13 @@ app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     
 
-    // const admin = await Admin.findOne({ username, password });
+    const admin = await Admin.findOne({ username, password });
 
-    // if (admin) {
-    //     res.send("Login successful");
-    // } else {
-    //     res.send("Invalid Credentials"); 
-    // }
+    if (admin) {
+        res.send("Login successful");
+    } else {
+        res.send("Invalid Credentials"); 
+    }
 });
 
 app.get('/', (req, res) => {
